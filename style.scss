@@ -206,30 +206,30 @@ img {
     li {
       display: block;
       float: left;
-      width: 23%;
+      width: 31.3%;
       margin-left: 2%;
       margin-bottom: 2%;
-      background: $textcolor;
-      height: 150px;
-      @media screen and (min-width: 992px){
-        &:nth-child(4n+1) {
-          margin-left: 0;
-          clear: left;
-        }
-      }
-      @media screen and (min-width: 768px) and (max-width: 991px){
-        width: 31.3%;
+      box-shadow: 0 0 2px 2px rgba(0,0,0,0.1);
+      -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,0.1);
+      border-radius: 4px;
+      font-size: 0;
+      @media screen and (min-width: 768px){
         &:nth-child(3n+1) {
           margin-left: 0;
           clear: left;
         }
       }
       @media screen and (max-width: 767px){
-        width: 48%;
-        &:nth-child(2n+1) {
-          margin-left: 0;
-          clear: left;
-        }
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+      }
+      a {
+        display: block;
+        font-size: 0;
+      }
+      img {
+        border-radius: 4px;
       }
     }
   }
