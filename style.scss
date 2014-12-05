@@ -89,6 +89,9 @@ header {
 section {
   padding: 100px 0;
   clear: both;
+  @media screen and (max-width: 767px){
+    padding: 50px 0;
+  }
   &.texture-bg {
     background-image: url(images/crossword.png);
     background-position: top left;
@@ -152,7 +155,10 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding: 254px 0 154px;
+  padding: 254px 0 225px;
+  @media screen and (max-width: 767px){
+    padding: 150px 0 130px;
+  }
   .hero-text {
     font-size: 28px;
     color: #fff;
@@ -166,6 +172,20 @@ img {
 #about {
   .content {
     width: 75%;
+  }
+  @media screen and (max-width: 768px){
+    text-align: center;
+    .content {
+      width: 100%;
+    }
+    img {
+      &.alignright {
+        display: block;
+        width: 40%;
+        margin: 0 auto 30px;
+        float: none;
+      }
+    }    
   }
 }
 
@@ -182,9 +202,25 @@ img {
       margin-bottom: 2%;
       background: $textcolor;
       height: 150px;
-      &:nth-child(4n+1) {
-        margin-left: 0;
-        clear: left;
+      @media screen and (min-width: 992px){
+        &:nth-child(4n+1) {
+          margin-left: 0;
+          clear: left;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px){
+        width: 31.3%;
+        &:nth-child(3n+1) {
+          margin-left: 0;
+          clear: left;
+        }
+      }
+      @media screen and (max-width: 767px){
+        width: 48%;
+        &:nth-child(2n+1) {
+          margin-left: 0;
+          clear: left;
+        }
       }
     }
   }
