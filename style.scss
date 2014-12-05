@@ -10,6 +10,15 @@ body {
 
 header {
   padding: 29px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: none;
+  -webkit-transition: background 300ms linear;
+  -moz-transition: background 300ms linear;
+  -o-transition: background 300ms linear;
+  -ms-transition: background 300ms linear;
+  transition: background 300ms linear;
   .container {
     position: relative;
   }
@@ -20,7 +29,7 @@ header {
     overflow: hidden;
     width: 179px;
     height: 42px;
-    background-image: url(images/logo.png);
+    background-image: url(images/logo_white.png);
     background-position: top left;
     background-repeat: no-repeat;
   }
@@ -42,14 +51,44 @@ header {
         }
         a {
           text-transform: uppercase;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.scroll {
+    background: #fff;
+    -webkit-transition: background 300ms linear;
+    -moz-transition: background 300ms linear;
+    -o-transition: background 300ms linear;
+    -ms-transition: background 300ms linear;
+    transition: background 300ms linear;
+    h1 {
+      background-image: url(images/logo.png);
+    }
+    nav {
+      ul {
+        li {
+          a {
+            color: $textcolor;
+          }
         }
       }
     }
   }
 }
 
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  width: 0;
+  clear: both;
+}
+
 section {
   padding: 100px 0;
+  clear: both;
   &.texture-bg {
     background-image: url(images/crossword.png);
     background-position: top left;
@@ -89,6 +128,9 @@ a {
     border-radius: 4px;
     background: #fff;
     display: inline-block;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -109,7 +151,8 @@ img {
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 154px 0;
+  background-attachment: fixed;
+  padding: 254px 0 154px;
   .hero-text {
     font-size: 28px;
     color: #fff;
@@ -123,6 +166,27 @@ img {
 #about {
   .content {
     width: 75%;
+  }
+}
+
+#portfolio {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      display: block;
+      float: left;
+      width: 23%;
+      margin-left: 2%;
+      margin-bottom: 2%;
+      background: $textcolor;
+      height: 150px;
+      &:nth-child(4n+1) {
+        margin-left: 0;
+        clear: left;
+      }
+    }
   }
 }
 

@@ -6,7 +6,16 @@ body {
   color: #586166; }
 
 header {
-  padding: 29px 0; }
+  padding: 29px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: none;
+  -webkit-transition: background 300ms linear;
+  -moz-transition: background 300ms linear;
+  -o-transition: background 300ms linear;
+  -ms-transition: background 300ms linear;
+  transition: background 300ms linear; }
   header .container {
     position: relative; }
   header h1 {
@@ -16,7 +25,7 @@ header {
     overflow: hidden;
     width: 179px;
     height: 42px;
-    background-image: url(images/logo.png);
+    background-image: url(images/logo_white.png);
     background-position: top left;
     background-repeat: no-repeat; }
   header nav {
@@ -35,10 +44,30 @@ header {
         header nav ul li:first-child {
           margin-left: 0; }
         header nav ul li a {
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          color: #fff; }
+  header.scroll {
+    background: #fff;
+    -webkit-transition: background 300ms linear;
+    -moz-transition: background 300ms linear;
+    -o-transition: background 300ms linear;
+    -ms-transition: background 300ms linear;
+    transition: background 300ms linear; }
+    header.scroll h1 {
+      background-image: url(images/logo.png); }
+    header.scroll nav ul li a {
+      color: #586166; }
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  width: 0;
+  clear: both; }
 
 section {
-  padding: 100px 0; }
+  padding: 100px 0;
+  clear: both; }
   section.texture-bg {
     background-image: url(images/crossword.png);
     background-position: top left;
@@ -72,6 +101,8 @@ a {
     border-radius: 4px;
     background: #fff;
     display: inline-block; }
+    a.btn:hover {
+      opacity: 0.5; }
 
 img {
   max-width: 100%;
@@ -88,7 +119,8 @@ img {
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 154px 0; }
+  background-attachment: fixed;
+  padding: 254px 0 154px; }
   #hero .hero-text {
     font-size: 28px;
     color: #fff;
@@ -99,6 +131,22 @@ img {
 
 #about .content {
   width: 75%; }
+
+#portfolio ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  #portfolio ul li {
+    display: block;
+    float: left;
+    width: 23%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    background: #586166;
+    height: 150px; }
+    #portfolio ul li:nth-child(4n+1) {
+      margin-left: 0;
+      clear: left; }
 
 #contact {
   text-align: center; }
