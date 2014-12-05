@@ -6,7 +6,6 @@ body {
   color: #586166; }
 
 header {
-  padding: 29px 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -17,17 +16,21 @@ header {
   -ms-transition: background 300ms linear;
   transition: background 300ms linear; }
   header .container {
+    padding: 29px 0;
     position: relative; }
   header h1 {
-    margin: 0;
-    display: block;
-    text-indent: 100%;
-    overflow: hidden;
-    width: 179px;
-    height: 42px;
-    background-image: url(images/logo_white.png);
-    background-position: top left;
-    background-repeat: no-repeat; }
+    margin: 0; }
+    header h1 a {
+      display: block;
+      text-indent: 100%;
+      overflow: hidden;
+      width: 179px;
+      height: 42px;
+      background-image: url(images/logo_white.png);
+      background-position: top left;
+      background-repeat: no-repeat; }
+      header h1 a:hover {
+        opacity: 0.5; }
   header nav {
     position: absolute;
     top: 50%;
@@ -46,6 +49,8 @@ header {
         header nav ul li a {
           text-transform: uppercase;
           color: #fff; }
+          header nav ul li a:hover, header nav ul li a.active {
+            opacity: 0.5; }
   header.scroll {
     background: #fff;
     -webkit-transition: background 300ms linear;
@@ -53,7 +58,7 @@ header {
     -o-transition: background 300ms linear;
     -ms-transition: background 300ms linear;
     transition: background 300ms linear; }
-    header.scroll h1 {
+    header.scroll h1 a {
       background-image: url(images/logo.png); }
     header.scroll nav ul li a {
       color: #586166; }
