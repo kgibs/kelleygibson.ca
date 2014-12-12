@@ -21,7 +21,6 @@ $(document).ready(function(){
   $('header a').click(function(e){
     var href = $(this).attr('href').substring(1);
     var target = $('#'+href).offset().top;
-    console.log(headerHeight);
     e.preventDefault();
     $('a.active').removeClass('active');
     $(this).addClass('active');
