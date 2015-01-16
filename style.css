@@ -16,10 +16,11 @@ header {
   -ms-transition: background 300ms linear;
   transition: background 300ms linear; }
   header .container {
-    padding: 29px 0;
+    padding: 30px 0;
     position: relative; }
   header h1 {
-    margin: 0; }
+    margin: 0;
+    padding: 30px 0 30px 10%; }
     header h1 a {
       display: block;
       text-indent: 100%;
@@ -29,28 +30,71 @@ header {
       background-image: url(images/logo_white.png);
       background-position: top left;
       background-repeat: no-repeat; }
+      @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        header h1 a {
+          background-image: url(images/logo_white@2x.png);
+          background-size: 179px 42px; } }
       header h1 a:hover {
         opacity: 0.5; }
-  header nav {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%); }
-    header nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0; }
+  header .navbar {
+    position: relative; }
+  header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    header nav ul li a {
+      text-transform: uppercase;
+      color: #fff; }
+      header nav ul li a:hover {
+        opacity: 0.5; }
+  @media screen and (max-width: 767px) {
+    header .nav-toggle {
+      position: absolute;
+      right: 30px;
+      top: 32px;
+      background-color: #9badc1;
+      border: none;
+      text-align: center;
+      border-radius: 4px;
+      padding: 10px;
+      cursor: pointer; }
+      header .nav-toggle .icon-bar {
+        display: block;
+        border-radius: 1px;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        margin-top: 4px; }
+        header .nav-toggle .icon-bar:first-of-type {
+          margin-top: 0; }
+      header .nav-toggle:focus {
+        outline: none; }
+    header nav {
+      display: none;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px 0 0; }
+      header nav ul {
+        padding-bottom: 20px; }
+        header nav ul li a {
+          color: #586166;
+          padding: 10px;
+          display: block;
+          text-align: center; } }
+  @media screen and (min-width: 768px) {
+    header .nav-toggle {
+      display: none; }
+    header nav {
+      display: inherit !important;
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%); }
       header nav ul li {
         display: inline-block;
         margin-left: 30px; }
         header nav ul li:first-child {
-          margin-left: 0; }
-        header nav ul li a {
-          text-transform: uppercase;
-          color: #fff; }
-          header nav ul li a:hover, header nav ul li a.active {
-            opacity: 0.5; }
+          margin-left: 0; } }
   header.scroll {
     background: #fff;
     -webkit-transition: background 300ms linear;
@@ -60,6 +104,10 @@ header {
     transition: background 300ms linear; }
     header.scroll h1 a {
       background-image: url(images/logo.png); }
+      @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        header.scroll h1 a {
+          background-image: url(images/logo@2x.png);
+          background-size: 179px 42px; } }
     header.scroll nav ul li a {
       color: #586166; }
 
@@ -122,12 +170,15 @@ img {
   margin-left: 2%;
   width: 23%; }
 
+.no-touch #hero {
+  background-attachment: fixed; }
+
 #hero {
   background-image: url(images/hero_image.png);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   padding: 254px 0 225px; }
   @media screen and (max-width: 767px) {
     #hero {
@@ -178,9 +229,12 @@ img {
         margin-bottom: 20px; } }
     #portfolio ul li a {
       display: block;
-      font-size: 0; }
+      font-size: 0;
+      outline: none;
+      border: none; }
     #portfolio ul li img {
-      border-radius: 4px; }
+      border-radius: 4px;
+      border: none; }
 
 #contact {
   text-align: center; }

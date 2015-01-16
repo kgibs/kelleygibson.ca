@@ -19,11 +19,12 @@ header {
   -ms-transition: background 300ms linear;
   transition: background 300ms linear;
   .container {
-    padding: 29px 0;
+    padding: 30px 0;
     position: relative;
   }
   h1 {
     margin: 0;
+    padding: 30px 0 30px 10%;
     a {
       display: block;
       text-indent: 100%;
@@ -33,33 +34,95 @@ header {
       background-image: url(images/logo_white.png);
       background-position: top left;
       background-repeat: no-repeat; 
+      @media screen and (-webkit-min-device-pixel-ratio: 2), 
+      (min-resolution: 192dpi) { 
+        background-image: url(images/logo_white@2x.png);
+        background-size: 179px 42px;
+      }
       &:hover {
         opacity: 0.5;
       }     
     }
   }
+  .navbar {
+    position: relative;
+  }
   nav {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
     ul {
       list-style: none;
       padding: 0;
       margin: 0;
       li {
-        display: inline-block;
-        margin-left: 30px;
-        &:first-child {
-          margin-left: 0;
-        }
         a {
           text-transform: uppercase;
           color: #fff;
-          &:hover,
-          &.active {
+          &:hover {
             opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px){
+    .nav-toggle {
+      position: absolute;
+      right: 30px;
+      top: 32px;
+      background-color: #9badc1;
+      border: none;
+      text-align: center;
+      border-radius: 4px;
+      padding: 10px;
+      cursor: pointer;
+      .icon-bar {
+        display: block;
+        border-radius: 1px;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        margin-top: 4px;
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    nav {
+      display: none;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px 0 0;
+      ul {
+        padding-bottom: 20px;
+        li {
+          a {
+            color: $textcolor;
+            padding: 10px;
+            display: block;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 768px){
+    .nav-toggle {
+      display: none;
+    }
+    nav {
+      display: inherit !important;
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      ul {
+        li {
+          display: inline-block;
+          margin-left: 30px;
+          &:first-child {
+            margin-left: 0;
           }
         }
       }
@@ -74,6 +137,11 @@ header {
     transition: background 300ms linear;
     h1 a {
       background-image: url(images/logo.png);
+      @media screen and (-webkit-min-device-pixel-ratio: 2), 
+      (min-resolution: 192dpi) { 
+        background-image: url(images/logo@2x.png);
+        background-size: 179px 42px;
+      }
     }
     nav {
       ul {
@@ -158,12 +226,18 @@ img {
   width: 23%;
 }
 
+.no-touch {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
 #hero {
   background-image: url(images/hero_image.png);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   padding: 254px 0 225px;
   @media screen and (max-width: 767px){
     padding: 150px 0 130px;
@@ -227,9 +301,12 @@ img {
       a {
         display: block;
         font-size: 0;
+        outline: none;
+        border: none;
       }
       img {
         border-radius: 4px;
+        border: none;
       }
     }
   }

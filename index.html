@@ -9,13 +9,28 @@
 
   <link rel="stylesheet" href="style.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-  <!-- ADD FAVICON (INITALS IN CIRCLE) -->
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <script type="text/javascript" src="js/modernizr.js"></script>
+
+  <!--[if lte IE 8]>
+    <script type="text/javascript">
+      alert('This site has not been optimized for your browser. Please update your browser to view.');
+    </script>
+  <![endif]-->
 </head>
 <body id="top">
   <header>
-    <div class="container">
+    <div class="navbar">
       <h1><a href="#top">Kelley Gibson</a></h1>
 
+      <button class="nav-toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>        
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
@@ -30,7 +45,7 @@
   <section id="hero">
     <div class="container">
 
-      <p class="hero-text">Blah blah blah blah blah blah blah Blah blah blah blah blah blah blah Blah blah blah blah blah blah blah</p>
+      <p class="hero-text">Toronto-based web developer specializing in clean, valid code and exceptional customer service.</p>
 
     </div>
   </section>
@@ -58,7 +73,7 @@
       <h2>Portfolio</h2>
 
       <ul class="clearfix">
-        <li title="Coming Soon!"><img src="images/portfolio/settler.png" alt="Settler"></li>
+        <li><a href="http://settler.io/" title="Settler" target="_blank"><img src="images/portfolio/settler.png" alt="Settler"></a></li>
         <li><a href="http://secretsanta.phuse.ca/" title="Secret Santa App" target="_blank"><img src="images/portfolio/secretsanta.png" alt="Secret Santa app"></a></li>
         <li><a href="http://beaconsfieldcards.com" title="Beaconsfield Cards" target="_blank"><img src="images/portfolio/beaconsfieldcards.png" alt="Beaconsfield Cards"></a></li>
         <li><a href="http://sbssandwiches.com/" title="Sky Blue Sky Sandwiches" target="_blank"><img src="images/portfolio/sbs.png" alt="Sky Blue Sky Sandwiches"></a></li>
