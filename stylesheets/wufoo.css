@@ -1,0 +1,167 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+
+ Title : Example Custom CSS : DinoMaster!
+ URL : http://wufoo.com
+
+ Last Updated : April 1, 2011
+
+- - - - - - - - - - - - - - - - - - - - - 
+
+INSTRUCTIONS
+1. Copy / Paste all or portions of these
+CSS rules into "custom.css".
+
+2. Experiment and play.
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+/* - - - Default - - - */
+.wufoo * {
+  font-family: 'PT Sans', sans-serif !important;
+}
+.wufoo * {
+  box-sizing: border-box;
+}
+
+.embed #container {
+  margin-bottom: 0;
+}
+
+/* Logo */
+#logo,
+.wufoo #header {
+  display: none;
+}
+
+/* Backgrounds */
+#logo{background-image:none;background-color:#669900}
+.wufoo li.focused {
+  background: none;
+}
+.wufoo label.desc, .wufoo legend.desc {
+  display: none;
+}
+.wufoo input.text, .wufoo input.search, .wufoo textarea.textarea {
+  border: 2px solid #b76e79;
+  border-radius: 4px;
+  outline: none;
+  padding: 14px 20px;
+  line-height: 1;
+  font-size: 16px;
+  margin-bottom: 40px;
+  background: transparent;
+  background-color: #fff;
+  width: 100% !important;
+  -webkit-appearance: none;
+
+}
+.wufoo textarea.textarea {
+  width: 100%;
+  resize: none;
+  height: 160px;
+}
+.wufoo input.submit {
+  -webkit-appearance: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #b76e79;
+  border: none;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 0 auto;
+  display: block;
+  min-width: 25%;
+  cursor: pointer;
+  transition: background-color 250ms;
+}
+@media screen and (max-width: 599px){
+  .wufoo input.submit {
+    min-width: 50%;
+  }
+}
+.wufoo input.submit:hover,
+.wufoo input.submit:focus {
+  background-color: #9f5f69;
+  outline: none;
+}
+body form.wufoo {
+  padding: 0;
+}
+form.wufoo li {
+  padding: 0;
+}
+@media screen and (min-width: 600px){
+  .wufoo li#fo2li6,
+  .wufoo li#fo2li7 {
+    width: 50% !important;
+    float: left;
+    padding-right: 20px;
+  }
+  .wufoo li#fo2li6:after,
+  .wufoo li#fo2li7:after {
+    display: none;
+  }
+  .wufoo li#fo2li5,
+  .wufoo li#fo2li4 {
+    width: 50% !important;
+    float: left;
+    padding-left: 20px;
+    clear: none;
+  }  
+}
+.wufoo li#errorLi {
+  display: none !important;
+}
+form.wufoo li.error {
+  background-color: transparent !important;
+  position: relative;
+}
+form.wufoo li.error p.error {
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #b76e79;
+  opacity: 0.6;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #b76e79;
+  opacity: 0.6;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #b76e79;
+  opacity: 0.6;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #b76e79;
+  opacity: 0.6;
+}
+.wufoo .create-message,
+.wufoo a.start-cta,
+.wufoo .logo-container {
+  display: none !important;
+}
+.wufoo h2.freeHeading {
+  margin: 0 !important;
+}
+
+/* Hide report abuse link */
+
+.buttons a {
+  position: relative;
+}
+.buttons a:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 14px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

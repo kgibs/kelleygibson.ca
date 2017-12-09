@@ -1,0 +1,44 @@
+.portfolio {
+  h2 {
+    margin-bottom: 60px;
+  }
+  .container {
+    padding-bottom: 0;
+  }
+}
+.portfolio-grid {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  max-width: 1280px;
+  margin: 0 auto;
+  .portfolio-item {
+    width: 33.3%;
+    text-align: center;
+    position: relative;
+    @media screen and (max-width: 767px){
+      width: 50%;
+    }
+    @media screen and (max-width: 500px){
+      width: 100%;
+    }
+    a {
+      padding-top: 60%;
+      width: 100%;
+      display: block;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+      width: 60%;
+      margin: 0 auto;
+      transition: width 250ms;
+    }
+    &:hover {
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
