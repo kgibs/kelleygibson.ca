@@ -3,12 +3,15 @@
     $redirect= "https://kelleygibson.ca".$_SERVER["REQUEST_URI"];
     header("Location:$redirect");
   }
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>Kelley Gibson | Toronto based front end developer specializing in Wordpress development</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="Kelley Gibson is a front end developer available for hire based in Toronto, Canada, specializing in HTML, CSS, WordPress and jQuery among other things." />
+
+  <title>Kelley Gibson | Toronto based front end developer specializing in WordPress development</title>
 
   <link rel="shortcut icon" href="favicon.png" />
 
@@ -59,7 +62,7 @@
           <h3>Toronto-based Front End Developer and self-proclaimed ice cream aficionado</h3>          
         </div>
 
-        <p>Nearly a decade ago, I serendipitously fell into a career in web development, and I haven’t looked back since. With a brain equally stimulated by math and the arts, I find coding to be the perfect balance. I love turning designs into <a class="scroll-link" href="portfolio">functioning websites</a> and specialize in building sites with content management systems (<a href="http://wordpress.org" title="Wordpress" target="_blank">Wordpress</a> is my jam) to give clients full and easy control over their site content.</p>
+        <p>Nearly a decade ago, I serendipitously fell into a career in web development, and I haven’t looked back since. With a brain equally stimulated by math and the arts, I find coding to be the perfect balance. I love turning designs into <a class="scroll-link" href="portfolio">functioning websites</a> and specialize in building sites with content management systems (<a href="http://wordpress.org" title="WordPress" target="_blank">WordPress</a> is my jam) to give clients full and easy control over their site content.</p>
 
         <p>When not hard at work on client projects, I love experiencing life through the eyes of my two daughters,  running (one full and six half marathons so far), endless games of fetch with my Nova Scotia Duck Tolling Retriever <a href="http://www.huffingtonpost.ca/entry/adorable-dog-sleeps-plays-and-chews_n_5207998" target="_blank">Phoenix</a>, all things music related, traveling and Canadian summers.</p>
 
